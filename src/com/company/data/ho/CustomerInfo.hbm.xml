@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by the Middlegen Hibernate plugin 2.2
+
+    http://boss.bekk.no/boss/middlegen/
+    http://www.hibernate.org/
+-->
+
+<class 
+    name="com.company.data.ho.CustomerInfo" 
+    table="CustomerInfo"
+    lazy="false"
+>
+
+    <id
+        name="tel"
+        type="java.lang.String"
+        column="用户号码"
+    >
+    
+       <generator class="native" />
+    </id>
+
+    
+    <!-- Associations -->
+  
+
+</class>
+</hibernate-mapping>

@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by the Middlegen Hibernate plugin 2.2
+
+    http://boss.bekk.no/boss/middlegen/
+    http://www.hibernate.org/
+-->
+
+<class 
+    name="com.company.data.ho.Gz" 
+    table="gz"
+    lazy="false"
+>
+
+    <id
+        name="id"
+        type="java.lang.Integer"
+        column="id"
+    >
+    
+       <generator class="identity" />
+    </id>
+
+    
+    <property
+        name="name"
+        type="java.lang.String"
+        column="name"
+       
+    />
+      <property
+        name="nums"
+        type="java.lang.String"
+        column="nums"
+       
+    />
+      <property
+        name="jbgz"
+        type="java.lang.Float"
+        column="jbgz"
+       
+    />
+      <property
+        name="addgz"
+        type="java.lang.Float"
+        column="addgz"
+       
+    />
+    <property
+        name="bx"
+        type="java.lang.Float"
+        column="bx"
+       
+    />
+    <property
+        name="gwjt"
+        type="java.lang.Float"
+        column="gwjt"
+       
+    />
+    <property
+        name="kh"
+        type="java.lang.Float"
+        column="kh"
+       
+    />
+    <property
+        name="grsds"
+        type="java.lang.Float"
+        column="grsds"
+       
+    />
+    <property
+        name="gz"
+        type="java.lang.Float"
+        column="gz"
+       
+    />
+    <property
+        name="type"
+        type="java.lang.String"
+        column="type"
+       
+    />
+    <property
+        name="bk1"
+        type="java.lang.String"
+        column="bk1"
+       
+    />
+    <property
+        name="bk2"
+        type="java.lang.String"
+        column="bk2"
+       
+    />
+    <property
+        name="yfgz"
+        type="java.lang.Float"
+        column="yfgz"
+       
+    />
+  
+
+</class>
+</hibernate-mapping>

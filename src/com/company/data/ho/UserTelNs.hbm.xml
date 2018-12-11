@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by the Middlegen Hibernate plugin 2.2
+
+    http://boss.bekk.no/boss/middlegen/
+    http://www.hibernate.org/
+-->
+
+<class 
+    name="com.company.data.ho.UserTelNs" 
+    table="临时任务"
+    lazy="false"
+>
+
+    <id
+        name="tel"
+        type="java.lang.String"
+        column="PhoneNo"
+    >
+    
+       <generator class="native" />
+    </id>
+
+    
+    <property
+        name="userNo"
+        type="java.lang.String"
+        column="UserNo"
+       
+    />
+    
+  
+
+</class>
+</hibernate-mapping>

@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by the Middlegen Hibernate plugin 2.2
+
+    http://boss.bekk.no/boss/middlegen/
+    http://www.hibernate.org/
+-->
+
+<class 
+    name="com.company.data.ho.UserInfo" 
+    table="UserInfo"
+    lazy="false"
+>
+
+    <id
+        name="id"
+        type="java.lang.String"
+        column="Id"
+    >
+    
+       <generator class="native" />
+    </id>
+
+    
+    <property
+        name="Cname"
+        type="java.lang.String"
+        column="Cname"
+       
+    />
+    <property
+        name="GroupId"
+        type="java.lang.String"
+        column="GroupId"
+       
+    />
+     <property
+        name="LoginName"
+        type="java.lang.String"
+        column="LoginName"
+       
+    />
+   <property
+        name="TelephonistGroupId"
+        type="java.lang.String"
+        column="TelephonistGroupId"
+       
+    />
+
+</class>
+</hibernate-mapping>

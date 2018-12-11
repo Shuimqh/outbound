@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd" [
+<!ENTITY XCategory "org.log4j.xml.examples.XCategory">
+]>
+
+
+<!-- A sample file demonstrating the configuration of Category and
+Priority sub-classes.  -->
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+    <!--  控制台日志:用于开发阶段  -->
+    <appender name="zyhouse-Console" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern"
+                   value="%r %d{yyyy-MM-dd HH:mm:ss} %c %p -%m%n"/>
+        </layout>	    
+    </appender>
+    
+    <!--  文件日志:用于发布运行阶段  -->
+    <appender name="zyhouse" class="org.apache.log4j.RollingFileAppender">
+        <param name="File" value="D:/temp/output.log" />
+        <param name="Append" value="true" />
+        <param name="MaxFileSize" value="1024000" />
+        <param name="MaxBackupIndex" value="10" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern"
+                   value="%r %d{yyyy-MM-dd HH:mm:ss} %c %p -%m%n"/>
+        </layout>	    
+    </appender>
+         <logger name="com.zyhouse" additivity="false">
+        <level value="DEBUG"/>
+        <!-- 
+        ============= 开发阶段 ===============
+        -->
+        <appender-ref ref="zyhouse-Console"/>
+        <!-- 
+        ======================================
+        -->
+        
+        <!-- 
+        ================== 发布阶段 ==========================
+        <appender-ref ref="SimLink"/>
+        =====================================================
+        -->
+        
+    </logger>
+    
+    <root>
+        <priority value="ERROR"/>
+        <appender-ref ref="zyhouse"/>
+    </root>
+   
+</log4j:configuration>

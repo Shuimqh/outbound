@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by the Middlegen Hibernate plugin 2.2
+
+    http://boss.bekk.no/boss/middlegen/
+    http://www.hibernate.org/
+-->
+
+<class 
+    name="com.company.data.ho.CallItem" 
+    table="CallItem"
+    lazy="false"
+>
+
+    <id
+        name="id"
+        type="java.lang.String"
+        column="Id"
+    >
+    
+       <generator class="native" />
+    </id>
+
+    
+    <property
+        name="callType"
+        type="java.lang.String"
+        column="callType"
+       
+    />
+    
+   <property
+        name="status"
+        type="java.lang.String"
+        column="status"
+       
+    />
+     <property
+        name="BizType"
+        type="java.lang.String"
+        column="BizType"
+       
+    />
+     <property
+        name="BizSubType"
+        type="java.lang.String"
+        column="BizSubType"
+       
+    />
+    <property
+        name="CreateUser"
+        type="java.lang.String"
+        column="CreateUser"
+       
+    />
+     <property
+        name="Char05"
+        type="java.lang.String"
+        column="Char05"
+       
+    />
+    <property
+        name="Char02"
+        type="java.lang.String"
+        column="Char02"
+       
+    />
+     <property
+        name="CreateDate"
+        type="java.sql.Timestamp"
+        column="CreateDate"
+        length="19"
+    />
+    <property
+        name="Date03"
+        type="java.sql.Timestamp"
+        column="Date03"
+        length="19"
+    />
+
+</class>
+</hibernate-mapping>
