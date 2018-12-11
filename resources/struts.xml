@@ -1,124 +1,120 @@
 <!DOCTYPE struts PUBLIC  
     "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"  
     "http://struts.apache.org/dtds/struts-2.3.dtd">  
-
-<struts>
-    
+<struts> 
     <constant name="struts.i18n.encoding" value="UTF-8" />
-    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
-       	
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />       	
 	<include file="background.xml" />
-	<constant name="struts.multipart.parser" value="jakarta" />
-	
+	<constant name="struts.multipart.parser" value="jakarta" />	
 	<package name="back" namespace="/" extends="struts-default">   
-			<!-- 首页 -->
-   			<action name="head" class="backAction" method="Head">
-               <result name="success">/jsp/head/index.jsp</result>              	
-			</action>	
-			<action name="dtdata" class="backAction" method="Dtdata">
-               <result name="success">/jsp/head/index.jsp</result>              	
-			</action>
-			<!-- 新增工资 -->
-			<action name="addgz" class="backAction" method="Addgz">
-               <result name="success">/jsp/gz.jsp</result>              	
-			</action>
-			<!-- 工资 -->
-			<action name="gz" class="backAction" method="Gz">
-               <result name="success">/jsp/gz.jsp</result>              	
-			</action>
-			<!-- 今日成交量 -->
-			<action name="today" class="backAction" method="Today">
-               <result name="success">/jsp/today.jsp</result>              	
-			</action>
-			<!-- 本周成交量 -->
-			<action name="week" class="backAction" method="Week">
-               <result name="success">/jsp/week.jsp</result>              	
-			</action>
-			<!-- 当月成交量 -->
-			<action name="month" class="backAction" method="Month">
-               <result name="success">/jsp/month.jsp</result>              	
-			</action>
-			<!-- 发布 -->
-   			<action name="fb" class="backAction" method="Fb">
-               <result name="success">/jsp/fb.jsp</result>              	
-			</action>
-			<!-- 进入新增信息页面 -->
-   			<action name="addnotpad" class="backAction" method="Addnotpad">
-               <result name="success">/jsp/addNotPad.jsp</result>              	
-			</action>
-			<!-- 保存信息 -->
-   			<action name="saveNotPad" class="backAction" method="SaveNotPad">               
-                <result name="success" type="redirect">/fb.action</result>           	
-			</action>
-			<!-- test -->
-			<action name="login" class="backAction" method="Login">
-               <result name="success">/jsp/cj/index.jsp</result>              	
-			</action>
-			<!-- 今日成交量(录单) -->
-			<action name="todayldl" class="backAction" method="Todayldl">
-               <result name="success">/jsp/todayldl.jsp</result>              	
-			</action>
-			<!-- 当月成交量(录单) -->
-			<action name="monthldl" class="backAction" method="Monthldl">
-               <result name="success">/jsp/monthldl.jsp</result>              	
-			</action>			
-			<!-- 今日录音成交量 -->
-			<action name="todayly" class="backAction" method="Todayly">
-               <result name="success">/jsp/todayly.jsp</result>              	
-			</action>			
-			<!-- 冲量任务 -->
-			<action name="tongji" class="backAction" method="Tongji">
-               <result name="success">/jsp/tongji.jsp</result>              	
-			</action>			
-			<!-- 小组录音、成交量成交量 -->
-			<action name="todayLyCjl" class="backAction" method="TodayLyCjl">
-               <result name="success">/jsp/todaylycjl.jsp</result>              	
-			</action>
-			<!-- 进入小组录音、成交量成交量 -->
-			<action name="gotodayLyCjl" class="backAction" method="GoTodayLyCjl">
-               <result name="success">/jsp/todaylycjlindex.jsp</result>              	
-			</action>
-			<!--话务员 -->
-			<action name="gohwy" class="backAction" method="Gohwy">
-               <result name="success">/jsp/hwy.jsp</result>              	
-			</action>
-			<!--个人统计(月) -->
-			<action name="gr" class="backAction" method="Gr">
-               <result name="success">/jsp/gr.jsp</result>              	
-			</action>
-			<!--个人统计（天） -->
-			<action name="grday" class="backAction" method="Grday">
-               <result name="success">/jsp/grday.jsp</result>              	
-			</action>
-			<!--个人统计（小时） -->
-			<action name="grhour" class="backAction" method="Grhour">
-               <result name="success">/jsp/grhour.jsp</result>              	
-			</action>			
-			<!--小组统计(月) -->
-			<action name="group" class="backAction" method="Group">
-               <result name="success">/jsp/group/index.jsp</result>              	
-			</action>			
-			<!--小组统计(月) -->
-			<action name="groupName" class="backAction" method="GroupName">
-               <result name="success">/jsp/group/indexName.jsp</result>              	
-			</action>			
-			<!-- -->
-			<action name="detile" class="backAction" method="Detile">
-               <result name="success">/jsp/grxx.jsp</result>              	
-			</action>
-			<!-- 话务员当日通话时长统计 -->
-			<action name="thsc" class="backAction" method="Thsc">
-               <result name="success">/jsp/grthxx.jsp</result>              	
-			</action>
-			<!-- 话务员当日通话时长统计  -->
-			<action name="testthsc" class="backAction" method="Thsc02">
-			    <result name="success">/jsp/testthsc.jsp</result>
-			</action>
-			<action name="findTime" class="backAction" method="FindTime">
-               <result name="success">/jsp/group/indexTime.jsp</result>              	
-			</action>
-			<action name="findName" class="backAction" method="FindName">
-               <result name="success">/jsp/group/indexXm.jsp</result>                	
-			</action>
+	<!-- 首页 -->
+	<action name="head" class="backAction" method="Head">
+        <result name="success">/jsp/head/index.jsp</result>              	
+	</action>	
+	<action name="dtdata" class="backAction" method="Dtdata">
+        <result name="success">/jsp/head/index.jsp</result>              	
+	</action>
+	<!-- 新增工资 -->
+	<action name="addgz" class="backAction" method="Addgz">
+        <result name="success">/jsp/gz.jsp</result>              	
+	</action>
+	<!-- 工资 -->
+	<action name="gz" class="backAction" method="Gz">
+        <result name="success">/jsp/gz.jsp</result>              	
+	</action>
+	<!-- 今日成交量 -->
+	<action name="today" class="backAction" method="Today">
+        <result name="success">/jsp/today.jsp</result>              	
+	</action>
+	<!-- 本周成交量 -->
+	<action name="week" class="backAction" method="Week">
+        <result name="success">/jsp/week.jsp</result>              	
+	</action>
+	<!-- 当月成交量 -->
+	<action name="month" class="backAction" method="Month">
+        <result name="success">/jsp/month.jsp</result>              	
+	</action>
+	<!-- 发布 -->
+ 	<action name="fb" class="backAction" method="Fb">
+        <result name="success">/jsp/fb.jsp</result>              	
+	</action>
+	<!-- 进入新增信息页面 -->
+ 	<action name="addnotpad" class="backAction" method="Addnotpad">
+        <result name="success">/jsp/addNotPad.jsp</result>              	
+	</action>
+	<!-- 保存信息 -->
+ 	<action name="saveNotPad" class="backAction" method="SaveNotPad">               
+        <result name="success" type="redirect">/fb.action</result>           	
+	</action>
+	<!-- test -->
+	<action name="login" class="backAction" method="Login">
+        <result name="success">/jsp/cj/index.jsp</result>              	
+	</action>
+	<!-- 今日成交量(录单) -->
+	<action name="todayldl" class="backAction" method="Todayldl">
+             <result name="success">/jsp/todayldl.jsp</result>              	
+	</action>
+	<!-- 当月成交量(录单) -->
+	<action name="monthldl" class="backAction" method="Monthldl">
+             <result name="success">/jsp/monthldl.jsp</result>              	
+	</action>			
+	<!-- 今日录音成交量 -->
+	<action name="todayly" class="backAction" method="Todayly">
+             <result name="success">/jsp/todayly.jsp</result>              	
+	</action>			
+	<!-- 冲量任务 -->
+	<action name="tongji" class="backAction" method="Tongji">
+             <result name="success">/jsp/tongji.jsp</result>              	
+	</action>			
+	<!-- 小组录音、成交量成交量 -->
+	<action name="todayLyCjl" class="backAction" method="TodayLyCjl">
+             <result name="success">/jsp/todaylycjl.jsp</result>              	
+	</action>
+	<!-- 进入小组录音、成交量成交量 -->
+	<action name="gotodayLyCjl" class="backAction" method="GoTodayLyCjl">
+             <result name="success">/jsp/todaylycjlindex.jsp</result>              	
+	</action>
+	<!--话务员 -->
+	<action name="gohwy" class="backAction" method="Gohwy">
+             <result name="success">/jsp/hwy.jsp</result>              	
+	</action>
+	<!--个人统计(月) -->
+	<action name="gr" class="backAction" method="Gr">
+             <result name="success">/jsp/gr.jsp</result>              	
+	</action>
+	<!--个人统计（天） -->
+	<action name="grday" class="backAction" method="Grday">
+             <result name="success">/jsp/grday.jsp</result>              	
+	</action>
+	<!--个人统计（小时） -->
+	<action name="grhour" class="backAction" method="Grhour">
+             <result name="success">/jsp/grhour.jsp</result>              	
+	</action>			
+	<!--小组统计(月) -->
+	<action name="group" class="backAction" method="Group">
+             <result name="success">/jsp/group/index.jsp</result>              	
+	</action>			
+	<!--小组统计(月) -->
+	<action name="groupName" class="backAction" method="GroupName">
+             <result name="success">/jsp/group/indexName.jsp</result>              	
+	</action>			
+	<!-- -->
+	<action name="detile" class="backAction" method="Detile">
+             <result name="success">/jsp/grxx.jsp</result>              	
+	</action>
+	<!-- 话务员当日通话时长统计 -->
+	<action name="thsc" class="backAction" method="Thsc">
+             <result name="success">/jsp/grthxx.jsp</result>              	
+	</action>
+	<!-- 话务员当日通话时长统计  -->
+	<action name="testthsc" class="backAction" method="Thsc02">
+	    <result name="success">/jsp/testthsc.jsp</result>
+	</action>
+	<action name="findTime" class="backAction" method="FindTime">
+             <result name="success">/jsp/group/indexTime.jsp</result>              	
+	</action>
+	<action name="findName" class="backAction" method="FindName">
+             <result name="success">/jsp/group/indexXm.jsp</result>                	
+	</action>
    </package>    
 </struts>
